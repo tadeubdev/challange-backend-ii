@@ -12,28 +12,28 @@ export default class Recipe {
   }
 
   setId(id: string) {
-    if (id === '') {
+    if (id === '' || id === null) {
       throw new Error('Id cannot be empty');
     }
     this.id = id;
   }
 
   setDescription(description: string) {
-    if (description === '') {
+    if (description === '' || description === null) {
       throw new Error('Description cannot be empty');
     }
     this.description = description;
   }
 
   setValue(value: number) {
-    if (value === 0) {
+    if (value === 0 || value === null) {
       throw new Error('Value cannot be empty');
     }
     this.value = value;
   }
 
   setDate(date: string) {
-    if (date === '') {
+    if (date === '' || date === null) {
       throw new Error('Date cannot be empty');
     }
     let isValidDate = Date.parse(date);
