@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "./node_modules/.bin/jest",
     "test:watch": "yarn run test -- --watch",
     "test:coverage": "yarn run test -- --coverage"
   },
