@@ -2,11 +2,13 @@ export default class Expense {
   id: string;
   description: string;
   value: number;
+  date: string;
 
   constructor(id: string, description: string, value: number, date: string) {
     this.setId(id);
     this.setDescription(description);
     this.setValue(value);
+    this.setDate(date);
   }
 
   setId(id: string) {
@@ -28,5 +30,12 @@ export default class Expense {
       throw new Error('Value cannot be empty');
     }
     this.value = value;
+  }
+
+  setDate(date: string) {
+    if (date === '' || date === null) {
+      throw new Error('Date cannot be empty');
+    }
+    this.date = date;
   }
 }
