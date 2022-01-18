@@ -11,7 +11,7 @@ describe('Recipies', () => {
       new Recipe('', 'any_description', 10.00, '2022-01-18 16:53:00');
     }).toThrowError();
   });
-  test('ensure it trhows an error if a description id has been passed', () => {
+  test('ensure it trhows an error if a empty description has been passed', () => {
     expect(() => {
       new Recipe('any_id', '', 10.00, '2022-01-18 16:53:00');
     }).toThrowError();
