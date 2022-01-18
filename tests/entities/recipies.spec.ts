@@ -26,4 +26,9 @@ describe('Recipies', () => {
       new Recipe('any_id', 'any_description', 10.00, '');
     }).toThrowError();
   });
+  test('ensure it trhows an error if a invalid date has been passed', () => {
+    expect(() => {
+      new Recipe('any_id', 'any_description', 10.00, '2022-01-35 16:53:00');
+    }).toThrowError();
+  });
 });
