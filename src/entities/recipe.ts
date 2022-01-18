@@ -7,6 +7,7 @@ export default class Recipe {
   constructor(id: string, description: string, value: number, date: string) {
     this.setId(id);
     this.setDescription(description);
+    this.setValue(value);
   }
 
   setId(id: string) {
@@ -21,5 +22,12 @@ export default class Recipe {
       throw new Error('Description cannot be empty');
     }
     this.description = description;
+  }
+
+  setValue(value: number) {
+    if (value === 0) {
+      throw new Error('Value cannot be empty');
+    }
+    this.value = value;
   }
 }
