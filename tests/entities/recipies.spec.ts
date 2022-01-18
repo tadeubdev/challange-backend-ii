@@ -1,10 +1,8 @@
 import Recipe from "../../src/entities/recipe";
 
 describe('Recipies', () => {
-  test('ensure it can create an object', () => {
-    const sut = new Recipe('any_id', 'any_description', 10.00, '2022-01-18 16:53:00');
-
-    expect(sut).toBeInstanceOf(Recipe);
+  it('ensure it create an instance', () => {
+    expect(new Recipe('any_id', 'any_description', 10.00, '2022-01-18 16:53:00')).toBeTruthy();
   });
   test('ensure it trhows an error if a empty id has been passed', () => {
     expect(() => {
