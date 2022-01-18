@@ -36,6 +36,10 @@ export default class Recipe {
     if (date === '') {
       throw new Error('Date cannot be empty');
     }
+    let isValidDate = Date.parse(date);
+    if (isNaN(isValidDate)) {
+      throw new Error('Date is not valid');
+    }
     this.date = date;
   }
 }
