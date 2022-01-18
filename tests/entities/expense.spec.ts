@@ -16,4 +16,7 @@ describe('Expense', () => {
   it('ensure it throws an error when a empty date has been passed', () => {
     expect(() => new Expense('any_id', 'any_desc', 10.00, null)).toThrowError();
   })
+  it('ensure it throws an error when a invalid date has been passed', () => {
+    expect(() => new Expense('any_id', 'any_desc', 10.00, '2021-13-01 12:00:00')).toThrowError();
+  })
 });
